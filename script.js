@@ -21,8 +21,15 @@ function playRound(humanChoice) {
     resultText += "It's a tie!";
   } else if (
     (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "rock" && computerChoice === "lizard") ||
     (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "scissors" && computerChoice === "paper")
+    (humanChoice === "paper" && computerChoice === "spock") ||
+    (humanChoice === "scissors" && computerChoice === "paper") ||
+    (humanChoice === "scissors" && computerChoice === "lizard") ||
+    (humanChoice === "lizard" && computerChoice === "spock") ||
+    (humanChoice === "lizard" && computerChoice === "paper") ||
+    (humanChoice === "spock" && computerChoice === "scissors") ||
+    (humanChoice === "spock" && computerChoice === "rock")
   ) {
     resultText += `You win! ${humanChoice} beats ${computerChoice}`;
     humanScore++;
