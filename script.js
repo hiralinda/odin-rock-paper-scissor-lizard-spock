@@ -1,3 +1,7 @@
+let humanScore = 0;
+let computerScore = 0;
+let roundsPlayed = 0;
+
 function getComputerChoice() {
   const getComputerChoices = ["rock", "paper", "scissors", "lizard", "spock"];
   return getComputerChoices[
@@ -5,13 +9,49 @@ function getComputerChoice() {
   ];
 }
 
-function getUserChoice() {
-  let userChoice = prompt(
-    "Do you choose rock, paper, scissors, lizard, or spock?"
-  );
-  return userChoice;
+function playRound(humanChoice) {
+  if (roundsPlayed >= 5) return;
+
+  const computerChoice = getComputerChoice();
+  roundsPlayed++;
+
+  let resultText = `Round ${roundsPlayed}: You chose ${humanChoice}, Computer chose ${computerChoice}. `;
+
+  if (humanChoice === computerChoice) {
+    resultText += "It's a tie!";
+  } else if (
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "paper" && computerChoice === "rock") ||
+    (humanChoice === "scissors" && computerChoice === "paper")
+  ) {
+    resultText += `You win! ${humanChoice} beats ${computerChoice}`;
+    humanScore++;
+  } else {
+    resultText += `You lose! ${computerChoice} beats ${humanChoice}`;
+    computerScore++;
+  }
+
+  document.getElementById("result").innerHTML = resultText;
+  updateScore();
+
+  if (roundsPlayed === 5) {
+    endGame();
+  }
 }
 
-function playGame() {}
+function updateScore() {
+  document.getElementById("score").innerHTML =
+    `Score - You: ${humanScore}, Computer: ${computerScore}`;
+}
 
-playGame();
+function endGame() {
+  let gameOverText = "Game Over! ";
+  if (humanScore > computerScore) {
+    gameOverText += "You win the game!";
+  } else if (computerScore > humanScore) {
+    gameOverText += "Computer wins the game!";
+  } else {
+    gameOverText += "It's a tie game!";
+  }
+  document.getElementById("game-over").innerHTML = gameOverText;
+}
