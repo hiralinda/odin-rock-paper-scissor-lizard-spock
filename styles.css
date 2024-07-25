@@ -11,7 +11,7 @@ body {
     color: #0f0;
     line-height: 1.6;
     padding: 0px;
-    margin: 0 200px;
+    margin: 0px;
     height: 100vh;
     text-align: center;
 }
@@ -25,6 +25,8 @@ body {
 .content-wrap {
     flex: 1 0 auto;
     padding: 20px;
+    max-width: 1200px;
+            width: 100%;
 }
 
 .tab-buttons {
@@ -79,6 +81,7 @@ iframe {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
 }
 
 .game-status {
@@ -123,4 +126,19 @@ iframe {
 
 .hidden {
     display: none !important;
+}
+
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .choice-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .status-screen {
+        width: 100%;
+    }
 }
