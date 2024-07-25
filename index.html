@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Lizard Spock</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="game-container">
-        <h1>Rock Paper Scissors</h1>
+    <h1>Rock Paper Scissors Lizard Spock</h1>
+
+    <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab('game')">Game</button>
+        <button class="tab-button" onclick="openTab('tutorials')">Tutorials</button>
+    </div>
+
+    <div id="game" class="tab-content container active">
+        <h2>Play the Game</h2>
         <div>
             <button onclick="playRound('rock')">Rock</button>
             <button onclick="playRound('paper')">Paper</button>
@@ -23,6 +30,34 @@
         <div id="score"></div>
         <div id="game-over"></div>
     </div>
+
+    <div id="tutorials" class="tab-content container">
+        <h2>Tutorials</h2>
+        <div class="tutorial-container">
+            <h3>Sheldon Explains</h3>
+            <iframe src="https://www.youtube.com/embed/pIpmITBocfM" allowfullscreen></iframe>
+        </div>
+        <div class="tutorial-container">
+            <h3>WikiHow Explains</h3>
+            <iframe src="https://www.youtube.com/embed/aQ1Nmxp55ms" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script>
+
+        function openTab(tabName) {
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
 </body>
 
 </html>

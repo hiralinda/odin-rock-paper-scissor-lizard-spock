@@ -3,10 +3,8 @@ let computerScore = 0;
 let roundsPlayed = 0;
 
 function getComputerChoice() {
-  const getComputerChoices = ["rock", "paper", "scissors", "lizard", "spock"];
-  return getComputerChoices[
-    Math.floor(Math.random() * getComputerChoices.length)
-  ];
+  const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+  return choices[Math.floor(Math.random() * choices.length)];
 }
 
 function playRound(humanChoice) {
@@ -20,21 +18,21 @@ function playRound(humanChoice) {
   if (humanChoice === computerChoice) {
     resultText += "It's a tie!";
   } else if (
-    (humanChoice === "rock" && computerChoice === "scissors") ||
-    (humanChoice === "rock" && computerChoice === "lizard") ||
-    (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "paper" && computerChoice === "spock") ||
-    (humanChoice === "scissors" && computerChoice === "paper") ||
-    (humanChoice === "scissors" && computerChoice === "lizard") ||
-    (humanChoice === "lizard" && computerChoice === "spock") ||
-    (humanChoice === "lizard" && computerChoice === "paper") ||
-    (humanChoice === "spock" && computerChoice === "scissors") ||
-    (humanChoice === "spock" && computerChoice === "rock")
+    (humanChoice === "rock" &&
+      (computerChoice === "scissors" || computerChoice === "lizard")) ||
+    (humanChoice === "paper" &&
+      (computerChoice === "rock" || computerChoice === "spock")) ||
+    (humanChoice === "scissors" &&
+      (computerChoice === "paper" || computerChoice === "lizard")) ||
+    (humanChoice === "lizard" &&
+      (computerChoice === "paper" || computerChoice === "spock")) ||
+    (humanChoice === "spock" &&
+      (computerChoice === "rock" || computerChoice === "scissors"))
   ) {
-    resultText += `You win! ${humanChoice} beats ${computerChoice}`;
+    resultText += `You win!`;
     humanScore++;
   } else {
-    resultText += `You lose! ${computerChoice} beats ${humanChoice}`;
+    resultText += `You lose!`;
     computerScore++;
   }
 
@@ -48,7 +46,7 @@ function playRound(humanChoice) {
 
 function updateScore() {
   document.getElementById("score").innerHTML =
-    `Score - You: ${humanScore}, Computer: ${computerScore}`;
+    `Score: You ${humanScore} - ${computerScore} Computer`;
 }
 
 function endGame() {
