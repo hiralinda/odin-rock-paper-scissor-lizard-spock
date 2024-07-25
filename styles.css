@@ -12,7 +12,8 @@ body {
     line-height: 1.6;
     padding: 20px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 0;
+    height: 100vh;
 
     image-rendering: pixelated;
 }
@@ -28,6 +29,11 @@ h1, h2 {
     padding: 20px;
     margin-bottom: 20px;
 text-align: center;
+}
+
+.content-wrap {
+    flex: 1 0 auto; /* This will push the footer down */
+    padding: 20px;
 }
 
 .tab-buttons {
@@ -89,8 +95,17 @@ iframe {
     margin-bottom: 20px;
 }
 
-footer {
+.footer {
+    flex-shrink: 0; 
+    background-color: #000;
+    border-top: 4px solid #0f0;
+
     text-align: center;
-    margin-top: 20px;
-    color: aliceblue;
+    font-size: 12px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

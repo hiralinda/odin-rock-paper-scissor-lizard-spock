@@ -10,43 +10,46 @@
 </head>
 
 <body>
-    <h2>Rock Paper Scissors Lizard Spock</h2>
-
-    <div class="tab-buttons">
-        <button class="tab-button active" onclick="openTab('game')">Game</button>
-        <button class="tab-button" onclick="openTab('tutorials')">Tutorials</button>
-    </div>
-
-    <div id="game" class="tab-content container active">
-        <h2>Play the Game</h2>
-        <div>
-            <button onclick="playRound('rock')">Rock</button>
-            <button onclick="playRound('paper')">Paper</button>
-            <button onclick="playRound('scissors')">Scissors</button>
-            <button onclick="playRound('lizard')">Lizard</button>
-            <button onclick="playRound('spock')">Spock</button>
+    <div class="page-container">
+        <div class="content-wrap">
+            <h2>Rock Paper Scissors Lizard Spock</h2>
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab('game')">Game</button>
+                <button class="tab-button" onclick="openTab('tutorials')">Tutorials</button>
+            </div>
+            <div id="game" class="tab-content container active">
+                <h2>Play the Game</h2>
+                <div>
+                    <button onclick="playRound('rock')">Rock</button>
+                    <button onclick="playRound('paper')">Paper</button>
+                    <button onclick="playRound('scissors')">Scissors</button>
+                    <button onclick="playRound('lizard')">Lizard</button>
+                    <button onclick="playRound('spock')">Spock</button>
+                </div>
+                <div id="result"></div>
+                <div id="score"></div>
+                <div id="game-over"></div>
+            </div>
+            <div id="tutorials" class="tab-content container">
+                <div class="tutorial-container">
+                    <img src="tutorial.jpeg" alt="Rock Paper Scissors Lizard Spock">
+                </div>
+                <div class="tutorial-container">
+                    <h3>Sheldon Explains</h3>
+                    <iframe src="https://www.youtube-nocookie.com/embed/pIpmITBocfM" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-container">
+                    <h3>WikiHow Explains</h3>
+                    <iframe src="https://www.youtube-nocookie.com/embed/aQ1Nmxp55ms" allowfullscreen></iframe>
+                </div>
+                <p class="notice">Note: Ad-blockers may interfere with video playback. If you experience issues, try
+                    disabling
+                    your ad-blocker or watch directly on YouTube.</p>
+            </div>
         </div>
-        <div id="result"></div>
-        <div id="score"></div>
-        <div id="game-over"></div>
-    </div>
-
-    <div id="tutorials" class="tab-content container">
-        <div class="tutorial-container">
-            <img src="tutorial.jpeg" alt="Rock Paper Scissors Lizard Spock">
-        </div>
-        <div class="tutorial-container">
-            <h3>Sheldon Explains</h3>
-            <iframe src="https://www.youtube-nocookie.com/embed/pIpmITBocfM" allowfullscreen></iframe>
-
-        </div>
-        <div class="tutorial-container">
-            <h3>WikiHow Explains</h3>
-            <iframe src="https://www.youtube-nocookie.com/embed/aQ1Nmxp55ms" allowfullscreen></iframe>
-
-        </div>
-        <p class="notice">Note: Ad-blockers may interfere with video playback. If you experience issues, try disabling
-            your ad-blocker or watch directly on YouTube.</p>
+        <footer>
+            <p style="color: aliceblue;">&copy; 2023. All Rights Reserved.</p>
+        </footer>
     </div>
     <script>
 
