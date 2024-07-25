@@ -54,4 +54,4 @@ The project uses custom CSS to implement a retro design:
 This project was inspired by the game featured in "The Big Bang Theory" and implements the expanded version of Rock Paper Scissors created by Sam Kass and Karen Bryla.
 
 ## Live Demo
-[View Live Demo](#)
+[View Live Demo](https://hiralinda.github.io/odin-rock-paper-scissor-lizard-spock/)
