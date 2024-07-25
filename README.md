@@ -23,6 +23,7 @@ This project is a retro-styled implementation of the game "Rock Paper Scissors L
 rock-paper-scissors-lizard-spock/
 │
 ├── index.html
+├── script.js
 └── style.css
 ```
 
