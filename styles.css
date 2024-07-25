@@ -10,29 +10,20 @@ body {
     background-color: #000;
     color: #0f0;
     line-height: 1.6;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 0;
+    padding: 0px;
+    margin: 0 200px;
     height: 100vh;
-
-    image-rendering: pixelated;
-}
-
-h1, h2 {
     text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
 .container {
-    border: 4px solid #0f0;
+    border: 3px solid #0f0;
     padding: 20px;
-    margin-bottom: 20px;
-text-align: center;
+    text-align: center;
 }
 
 .content-wrap {
-    flex: 1 0 auto; /* This will push the footer down */
+    flex: 1 0 auto;
     padding: 20px;
 }
 
@@ -40,17 +31,6 @@ text-align: center;
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    padding: 10px 20px;
-    font-family: 'PressStart2P', cursive;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
 }
 
 .tab-button:hover, .tab-button.active {
@@ -95,17 +75,52 @@ iframe {
     margin-bottom: 20px;
 }
 
-.footer {
-    flex-shrink: 0; 
-    background-color: #000;
-    border-top: 4px solid #0f0;
-
-    text-align: center;
-    font-size: 12px;
-}
-
 .page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.game-status {
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+.status-screen {
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+    background-color: #001100;
+    padding: 15px;
+}
+
+.status-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #000;
+    border: 1px solid #0f0;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#play-again {
+    padding: 10px 20px;
+    font-family: 'PressStart2P', cursive;
+    font-size: 16px;
+    color: #0f0;
+    background-color: #000;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#play-again:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.hidden {
+    display: none !important;
 }

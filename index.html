@@ -20,35 +20,47 @@
             <div id="game" class="tab-content container active">
                 <h2>Play the Game</h2>
                 <div>
-                    <button onclick="playRound('rock')">Rock</button>
-                    <button onclick="playRound('paper')">Paper</button>
-                    <button onclick="playRound('scissors')">Scissors</button>
-                    <button onclick="playRound('lizard')">Lizard</button>
-                    <button onclick="playRound('spock')">Spock</button>
+                    <button class="choice-btn" data-choice="rock">Rock</button>
+                    <button class="choice-btn" data-choice="paper">Paper</button>
+                    <button class="choice-btn" data-choice="scissors">Scissors</button>
+                    <button class="choice-btn" data-choice="lizard">Lizard</button>
+                    <button class="choice-btn" data-choice="spock">Spock</button>
                 </div>
-                <div id="result"></div>
-                <div id="score"></div>
-                <div id="game-over"></div>
+                <div class="game-status">
+                    <div class="status-screen">
+                        <div id="round" class="status-item">Round: 0/5</div>
+                        <div id="result" class="status-item ">Waiting for your move...</div>
+                        <div id="score" class="status-item">You: 0 | Computer: 0</div>
+                        <div id="game-over" class="status-item hidden">Game Over</div>
+                    </div>
+                    <button id="play-again" class="status-item hidden">Play Again?</button>
+                </div>
             </div>
             <div id="tutorials" class="tab-content container">
                 <div class="tutorial-container">
                     <img src="tutorial.jpeg" alt="Rock Paper Scissors Lizard Spock">
                 </div>
-                <div class="tutorial-container">
+                <!-- <div class="tutorial-container">
                     <h3>Sheldon Explains</h3>
                     <iframe src="https://www.youtube-nocookie.com/embed/pIpmITBocfM" allowfullscreen></iframe>
                 </div>
                 <div class="tutorial-container">
                     <h3>WikiHow Explains</h3>
                     <iframe src="https://www.youtube-nocookie.com/embed/aQ1Nmxp55ms" allowfullscreen></iframe>
-                </div>
+                </div> -->
                 <p class="notice">Note: Ad-blockers may interfere with video playback. If you experience issues, try
                     disabling
                     your ad-blocker or watch directly on YouTube.</p>
             </div>
         </div>
         <footer>
-            <p style="color: aliceblue;">&copy; 2023. All Rights Reserved.</p>
+            <small>
+                Challenge by <a href="https://www.theodinproject.com/lessons/foundations-rock-paper-scissors"
+                    target="_blank">The Odin
+                    Project</a>.
+                Coded by <a href="https://github.com/hiralinda/rock-paper-scissor-lizard-spock"
+                    target="_blank">Hiralinda</a>.
+            </small>
         </footer>
     </div>
     <script>
