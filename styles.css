@@ -87,7 +87,9 @@ iframe {
 .game-status {
     margin-top: 20px;
     padding: 10px;
-
+}
+.footer-text {
+    font-size: x-small;
 }
 
 .status-screen {
@@ -129,16 +131,51 @@ iframe {
 }
 
 @media (max-width: 768px) {
-    .tab-buttons {
-        flex-direction: column;
+    .content-wrap {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     .choice-btn {
-        width: 100%;
-        margin: 5px 0;
+        font-size: 0.8em;
     }
 
-    .status-screen {
-        width: 100%;
+    .emoji-icon {
+        font-size: 24px;
+    }
+
+    .tab-button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .choice-btn {
+        font-size: 0.7em;
+    }
+
+    .emoji-icon {
+        font-size: 20px;
+    }
+
+    .tab-button {
+        padding: 5px;
+        font-size: 0.7em;
+    }
+
+    .status-item {
+        font-size: 0.8em;
+    }
+    img {
+        max-width: 100%; 
+        height: auto;
     }
 }

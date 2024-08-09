@@ -19,12 +19,27 @@
             </div>
             <div id="game" class="tab-content container active">
                 <h2>Play the Game</h2>
-                <div>
-                    <button class="choice-btn" data-choice="rock">Rock</button>
-                    <button class="choice-btn" data-choice="paper">Paper</button>
-                    <button class="choice-btn" data-choice="scissors">Scissors</button>
-                    <button class="choice-btn" data-choice="lizard">Lizard</button>
-                    <button class="choice-btn" data-choice="spock">Spock</button>
+                <div id="game-container">
+                    <button class="choice-btn" data-choice="rock">
+                        <span class="emoji-icon">🪨</span>
+                        Rock
+                    </button>
+                    <button class="choice-btn" data-choice="paper">
+                        <span class="emoji-icon">📄</span>
+                        Paper
+                    </button>
+                    <button class="choice-btn" data-choice="scissors">
+                        <span class="emoji-icon">✂️</span>
+                        Scissors
+                    </button>
+                    <button class="choice-btn" data-choice="lizard">
+                        <span class="emoji-icon">🦎</span>
+                        Lizard
+                    </button>
+                    <button class="choice-btn" data-choice="spock">
+                        <span class="emoji-icon">🖖</span>
+                        Spock
+                    </button>
                 </div>
                 <div class="game-status">
                     <div class="status-screen">
@@ -54,7 +69,7 @@
             </div>
         </div>
         <footer>
-            <small>
+            <small class="footer-text">
                 Challenge by <a href="https://www.theodinproject.com/lessons/foundations-rock-paper-scissors"
                     target="_blank">The Odin
                     Project</a>.

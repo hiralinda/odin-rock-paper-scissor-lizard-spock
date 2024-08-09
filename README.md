@@ -1,7 +1,10 @@
 # Retro Rock Paper Scissors Lizard Spock
 
 ## Description
-This project is a retro-styled implementation of the game "Rock Paper Scissors Lizard Spock," created as a web-based application. It features a nostalgic, brutalist design reminiscent of early computer games, complete with pixelated fonts and a high-contrast color scheme.
+This project is a retro-styled implementation of the game "Rock Paper Scissors Lizard Spock," created as a web-based application. It features a nostalgic, brutalist design reminiscent of early computer games, complete with pixelated fonts and a high-contrast color scheme. It was developed as part of [The Odin Project](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors).
+
+## Live Demo
+[View Live Demo](https://hiralinda.github.io/odin-rock-paper-scissor-lizard-spock/)
 
 ## Features
 - Classic Rock Paper Scissors Lizard Spock gameplay
@@ -54,5 +57,3 @@ The project uses custom CSS to implement a retro design:
 ## Credits
 This project was inspired by the game featured in "The Big Bang Theory" and implements the expanded version of Rock Paper Scissors created by Sam Kass and Karen Bryla.
 
-## Live Demo
-[View Live Demo](https://hiralinda.github.io/odin-rock-paper-scissor-lizard-spock/)
